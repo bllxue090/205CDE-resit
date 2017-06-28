@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Sign Up</title>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<link rel="stylesheet"
+	href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script
+	src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/signup.js"></script>
+<link rel="stylesheet" href="css/myStyle.css" />
+
+<!-- Custom CSS -->
+<style>
+body {
+	padding-top: 70px;
+	/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+</style>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top myNav"
+		role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a  class="navbar-brand" href="./signin.html" style="color: rgb(232, 232, 232)">Back to Sign in</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul id="navList" class="nav navbar-nav">
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+	<!-- Page Content -->
+	<iframe name="formsubmit" style="display: none;"> </iframe>
+	<div class="container" id="container">
+	<div class="container" id="container" style="width: 420px">
+		<form id="myForm" method="post" class="form-horizontal"
+			target="formsubmit">
+			<div class="form-group">
+				<label for="name">User Account</label> <input type="text"
+					class="form-control" id="username" name="username" onkeyup="usernameValidate()"
+					required="required" placeholder="Please input your Account.">
+				<label class="errorRemeinder" id="usernameReminder">The
+					username has existed.</label>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label> <input type="password"  onkeyup="password1change()"
+					class="form-control" id="password1" name="password1" placeholder="Please input your Password."
+					required="required"> <label class="errorRemeinder"
+					id="password1Reminder">The password contains at least 5
+					characters, which must not include any spaces.</label>
+			</div>
+			<div class="form-group">
+				<label for="password2">Re-type Password</label> <input  onkeyup="password2change()"
+					type="password" class="form-control" id="password2"  placeholder="Please re-input your Password."
+					name="password2" required="required"> <label
+					class="errorRemeinder" id="password2Reminder">You should
+					enter a value that is exactly the same entry as the first password
+					entry.</label>
+			</div>
+			<div class="form-group">
+				<label>Name:</label> <input id="name" name="name" class="form-control" type="text"  placeholder="Please input your Name"
+					class="formText" placeholder="Name"></input>
+			</div>
+			<div class="form-group">
+				<label>Email Address:</label> <input id="email" class="form-control" name="email"  placeholder="Please input your Email."
+					class="formText" type="email" placeholder="Email"></input>
+			</div>
+			<div class="form-group">
+				<label>User Type:</label><br/> <label class="checkbox-inline"><input id="userType" name="userType" type="radio"
+					value="1"></input>Student</label><label class="checkbox-inline"> <input id="userType" name="userType"
+					type="radio" value="2"></input>Teacher</label>
+			</div>
+			<div class="form-group">
+			<button type="button" style="margin-top:10px" class="btn submitButton" onclick="return check(this.form)">Submit</button>'
+	        <button type="button" style="margin-top:10px;margin-left:10px" class="btn cancelButton" onclick="cancelSignup()">Cancel</button>
+
+			</div>
+
+		</form>
+		</div>
+		<div class="alert alert-success alert-dismissable" id="reminderDiv"
+			style="display: none">
+			<button type="button" class="close" data-dismiss="alert"
+				aria-hidden="true">&times;</button>
+			<span id="reminder"></span>
+		</div>
+	</div>
+
+</body>
+
+</html>

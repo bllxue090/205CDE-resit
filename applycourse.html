@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Apply Course</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/applycourse.js"></script>
+    <script src="js/dateExtensions.js"></script>
+    <link rel="stylesheet" href="css/myStyle.css" />
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top myNav" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style="color:rgb(232,232,232)" id="welcome"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul id="navList" class="nav navbar-nav">
+               		<li><a  onclick="logout()">Log out</a></li>
+					<li><a href="./studentcenter.html">My Courses</a></li>
+					<li><a href="./applycourse.html">Apply Course</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container" id="container" style="width:95%">
+		<table class="table table-striped">
+		  <caption></caption>
+		  <thead>
+		    <tr>
+		      <th>Course Name</th>
+		      <th>Start</th>
+		      <th>End</th>
+		      <th>Total Number</th>
+		      <th>Current Number</th>
+		      <th>Operation</th>
+		    </tr>
+		  </thead>
+		  <tbody id="courselist">
+		
+		  </tbody>
+		</table>
+    </div>
+    <div id= "response" class="list-group-item" style="display:none"></div>
+   
+</body>
+
+</html>

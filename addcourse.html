@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Add Course</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>    
+    <script src="js/addcourse.js"></script>
+    <link rel="stylesheet" href="css/myStyle.css" />
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top myNav" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style="color:rgb(232,232,232)" id="welcome"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul id="navList" class="nav navbar-nav">
+               <li><a  onclick="logout()">Log out</a></li>
+					<li><a href="./mycourse.html">My Course</a></li>
+					<li><a href="./addcourse.html">Add Course</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Page Content -->
+    <iframe name="formsubmit" style="display:none;">
+	</iframe>
+    <div class="container" id="container">
+    <div class="container" id="container" style="width:420px">
+    <form id="myForm" method="post" class="form-horizontal"  target="formsubmit">
+		  <div class="form-group">
+		    <label for="name">Course Name</label>
+		    <input type="text" class="form-control" id="name" name="name" required="required" placeholder="Please input your course name.">
+		  </div>
+		  <div class="form-group">
+		    <label for="name">Start Date</label>
+		     <input type="date" class="form-control" id="startDate" name="startDate" required="required">
+		  </div>
+		  <div class="form-group">
+		    <label for="name">End Date</label>
+		     <input type="date" class="form-control" id="endDate" name="endDate" required="required">
+		  </div>
+		  <div class="form-group">
+		    <label for="name">Course Description</label>
+		    <textarea id="description" name="description" class="form-control" rows="3" placeholder="Please input the description of your course."></textarea>
+		  </div>
+		  <div class="form-group">
+		    <label for="name">Total Number</label>
+		    <input type="text" class="form-control" id="number" name="number" required="required" placeholder="Please input the total number of your course.">
+		  </div>
+		  <div class="form-group" style="display:none">
+		    <input type="text" class="form-control" id="creater" name="creater">
+		  </div>
+		  <div class="form-group">
+		  	<input type="submit" id= "submit" onclick="return addCourse(this.form)" class="btn btn-default" value="Add Course"></input>
+		  </div>
+	</form>
+	</div>
+		<div class="alert alert-success alert-dismissable" id="reminderDiv" style="display:none">
+	            <button type="button" class="close" data-dismiss="alert"
+	                    aria-hidden="true">
+	                &times;
+	            </button>
+		<span id="reminder"></span>
+    </div>
+    </div>
+
+</body>
+
+</html>
